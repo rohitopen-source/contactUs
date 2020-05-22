@@ -8,11 +8,20 @@ import { MyserviceService } from '../myservice.service';
 })
 export class AcademyComponent implements OnInit {
 
-  constructor() { }
+  FullName = '';
+  Email = '';
+  Number = '';
+
+  constructor(private fetchserver:MyserviceService) { }
 
   ngOnInit(): void {
   }
-
+ 
+ 
+  addTheMessage(){
+    this.fetchserver.pushDataToServer(this.FullName,this.Email,this.Number).subscribe(data => {
+      console.log("this is detail" + data);
+    })
 }
-
+}
 

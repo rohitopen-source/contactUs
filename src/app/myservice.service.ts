@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class MyserviceService {
-apiURL: string = 'http://localhost:6789/contact';
+apiURL: string = 'http://localhost:6688/add';
 httpOptions = { headers:new HttpHeaders({
   'Content-Type' : 'application/json'
 })
