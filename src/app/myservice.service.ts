@@ -1,21 +1,24 @@
 import { Injectable } from '@angular/core';
-import {HttpClient,HttpHeaders} from '@angular/common/http';
+import {HttpClient,HttpErrorResponse} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import { map } from 'rxjs/operators';
+import { User } from './user';
+import { catchError } from 'rxjs/operators';
+import { throwError } from 'rxjs'; 
 
 @Injectable({
   providedIn: 'root'
 })
 export class MyserviceService {
-apiURL: string = 'http://localhost:6688/add';
-httpOptions = { headers:new HttpHeaders({
-  'Content-Type' : 'application/json'
-})
+  _url = 'http://localhost:6688/add';
+  constructor(private _http: HttpClient) { }
 
-};
-  constructor(private httpClient: HttpClient) { }
+  enroll (user: User) {
+    return this._http.post<any>(this._url, user)
+      .pipe(catchError(this.errorHandler))
+  }
 
-  pushDataToServer(FullName:string,Email:string,Number:string){
-    return this.httpClient.post(this.apiURL,{'FullName':FullName,'Email':Email,'Number':Number},this.httpOptions);
+  errorHandler(error: HttpErrorResponse) {
+    return throwError(error)
   }
 }

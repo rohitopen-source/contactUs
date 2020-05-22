@@ -18,10 +18,12 @@ export class AcademyComponent implements OnInit {
   }
  
  
-  addTheMessage(){
+  /*addTheMessage(){
     this.fetchserver.pushDataToServer(this.FullName,this.Email,this.Number).subscribe(data => {
       console.log("this is detail" + data);
     })
+    
 }
+*/
 }
 
