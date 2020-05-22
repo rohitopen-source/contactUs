@@ -23,10 +23,9 @@
      <div class="row">
        <div class="col-md-12 p-3" style=" text-align: center;">
         <h2 style="color: #db2414; font-weight: 750;">Caramel Service</h2>
-        <h3>Contact us</h3>
+        <h3 style="font-weight: 500;">Contact us</h3>
        </div>
      </div>
-    
     
     <form #userForm="ngForm" *ngIf="!submitted" (ngSubmit)="onSubmit()" novalidate>
       
@@ -59,7 +58,7 @@
       <div class="form-group">
         <label>Country</label>
         <select class = "custom-select" name="country" [(ngModel)]="userModel.country">
-          <option value=""  >India</option>
+          <option value=""  >Select Country</option>
           <option *ngFor = "let c of country">{{c}}</option>
         </select>
       </div>
@@ -74,11 +73,11 @@
           
             <div class="row">
               <div class="col-md-12">
-                <h2>For Carrer service</h2>
+                <h2 style="color: green;">For Carrer service</h2>
                <div class="form-group">
                  <label>Program</label>
                  <select class = "custom-select" name="program" [(ngModel)]="userModel.program">
-                 <option value="" elected >Core UI</option>
+                 <option value="" elected >Select Program</option>
                  <option *ngFor = "let c of program">{{c}}</option>
                </select>
                </div>
@@ -86,7 +85,7 @@
                <div class="form-group">
                  <label>Subprogram</label>
                  <select class = "custom-select" name ="subprogram" [(ngModel)]="userModel.subprogram">
-                   <option value=""  >Advanced UI</option>
+                   <option value=""  >Select subprogram</option>
                    <option *ngFor = "let c of subprogram">{{c}}</option>
                  </select>
                </div>
@@ -96,10 +95,10 @@
                
              <div class="col-md-12">
               <div class="form-group">
-                <h2> For IT Services</h2>
+                <h2 style="color: green;"> For IT Services</h2>
                  <label>Services</label>
                  <select class = "custom-select" name="service" [(ngModel)]="userModel.service">
-                   <option value="" >Mobile App</option>
+                   <option value="" >Select service</option>
                    <option *ngFor = "let c of service">{{c}}</option>
                  </select>
                </div>
@@ -107,7 +106,7 @@
                <div class="form-group">
                 <label>Budget</label>
                  <select class = "custom-select" name="budget" [(ngModel)]="userModel.budget">
-                   <option value=""  >50000-100000</option>
+                   <option value=""  >Select Budget </option>
                    <option *ngFor = "let c of budget">{{c}}</option>
                  </select>
                </div>
@@ -135,7 +134,7 @@
   
       
       <div style="text-align: center;" class="mt-4">
-        <button class="btn btn-primary" [disabled]="userForm.form.invalid "  type="submit">Submit form</button>
+        <button class="btn btn-primary"   type="submit">Submit form</button>
       </div>
       
     </div>

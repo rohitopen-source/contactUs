@@ -12,8 +12,8 @@ export class AppComponent {
   country = ['U.S.A','UK','AUSTRALIA','GERMANY'];
   service = ['Mobile App','Wed Development','Digital Marketing','DevOps','Python Development'];
   budget = ['50000 - 100000','100000 - 150000','150000 - 200000','200000 - 250000','250000 - 300000','300000'];
-  program =['Core UI','Backend'];
-  subprogram = ['Advanced UI','Advanced UI'];
+  program =['Core UI','Backend','Full Stack','DevOps','Data Science $ AI/ML','Digital Marketing','Cloud Computing','Cyber Security','ERP','IT Certifications'];
+  subprogram = ['Advanced UI','Advanced UI','Angular JS','React JS','Vue JS','Java','.Net','Node Js','Ruby','Python','Core Java','Advanced Java','MEAN','MERN','MEVN'];
 
 
   submitted = false;
@@ -25,11 +25,12 @@ export class AppComponent {
   
 
   onSubmit() {
+    console.log(this.userModel);
     this.submitted = true;
     this._enrollmentService.enroll(this.userModel)
       .subscribe(
         response => console.log('Success!', response),
-        error => this.errorMsg = error.statusText
+        error => console.error('Error!',error)
       )
   }
   
