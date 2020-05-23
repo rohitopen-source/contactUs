@@ -80,10 +80,10 @@
       </div>
         </div>
         <div class="col-md-6">
-          
+
             <div class="row" >
               <div class="col-md-12">
-                <h2 style="color: green;">  Academy service</h2>
+                <h2 style="color: green;">  Academy Service</h2>
                <div class="form-group">
                  <label> Program</label>
                  <select class = "custom-select" name="program" [(ngModel)]="userModel.program">
@@ -91,7 +91,7 @@
                  <option *ngFor = "let c of program">{{c}}</option>
                </select>
                </div>
-       
+            
                <div class="form-group">
                  <label> Sub-Program</label>
                  <select class = "custom-select" name ="subprogram" [(ngModel)]="userModel.subprogram">
@@ -102,11 +102,11 @@
        
              </div>
       
-             
+             <br>
              <div class="col-md-12" >
               <div class="form-group">
                
-               
+               <br>
                
                 <h2 style="color: green;" >  IT Services</h2>
                  <label>Services</label>
@@ -119,12 +119,14 @@
                </div>
          
                <div class="form-group">
+    
                 <label>Budget</label>
                  <select class = "custom-select" name="budget" [(ngModel)]="userModel.budget">
                    <option value=""  >Select Budget </option>
                    <option *ngFor = "let c of budget">{{c}}</option>
                  </select>
                </div>
+               
 
                <div class="form-group">
                 <label> User Experience</label>
