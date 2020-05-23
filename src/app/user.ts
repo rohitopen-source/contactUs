@@ -9,6 +9,8 @@ export class User {
         public subprogram: string,
         public program: string,
         public budget : string,
-        public service : string
+        public service : string,
+        public states: string,
+        public userE: string
     ) {}
 }
